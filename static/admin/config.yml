@@ -15,14 +15,6 @@ collections:
       - {label: "Post Author", name: "author", widget: "relation", collection: "category"}
 
 collections:
-  - name: "category"
-    label: "Category"
-    folder: "content/category"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Category", name: "category", widget: "string" }
-collections:
   - name: "blog"
     label: "Blog"
     folder: "content/"
