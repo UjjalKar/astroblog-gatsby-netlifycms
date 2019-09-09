@@ -14,9 +14,7 @@ collections:
     editor:
       preview: true
     fields:
-      - label: "Title"
-        name: "title"
-        widget: "string"
+      - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
@@ -30,16 +28,3 @@ collections:
           displayFields: ["name"],
         }
       - { label: "Body", name: "body", widget: "markdown" }
-  - name: "author"
-    label: "Author"
-    folder: "content/author"
-    create: true
-    identifier_field: slug
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template i.e. YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Profile Picture", name: "avatar", widget: "image" }
-      - { label: "Email", name: "email", widget: "string" }
-      - { label: "Publish Date", name: "Author-sdate", widget: "datetime" }
-      - { label: "Facebook Profile Link", name: "facebook", widget: "string" }
-      - { label: "Twitter Profile Link", name: "twitter", widget: "string" }
