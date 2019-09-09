@@ -37,6 +37,6 @@ collections:
       - { label: "Name", name: "name", widget: "string" }
       - { label: "Profile Picture", name: "avatar", widget: "image" }
       - { label: "Email", name: "email", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Publish Date", name: "Author-sdate", widget: "datetime" }
       - { label: "Facebook Profile Link", name: "facebook", widget: "string" }
       - { label: "Twitter Profile Link", name: "twitter", widget: "string" }
