@@ -17,7 +17,6 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
       - {
           label: "Post Author",
@@ -28,16 +27,19 @@ collections:
           valueField: "name.name",
           displayFields: ["name"],
         }
-# collections:
-#   - name: "authors"
-#     lable: "Authors"
-#     folder: "content/authors"
-#     create: true
-#     slug: "{{slug}}"
-#   fields:
-#     - { lable: "Name", name: "name", widget: "string" }
-#     - { lable: "Bio", name: "bio", widget: "string" }
-#     - { label: "Avatar", name: "avatar", widget: "image" }
-#     - { label: "Email", name: "email", widget: "string" }
-#     - { label: "Facebook-Url", name: "facebook", widget: "string" }
-#     - { label: "Twitter-Url", name: "twitter", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+
+collections:
+  - name: "authors"
+    lable: "Authors"
+    folder: "content/authors"
+    create: true
+    slug: "{{slug}}"
+  fields:
+    - { lable: "Name", name: "name", widget: "string" }
+    - { lable: "Bio", name: "bio", widget: "string" }
+    - { label: "Avatar", name: "avatar", widget: "image" }
+    - { label: "Email", name: "email", widget: "string" }
+    - { label: "Facebook-Url", name: "facebook", widget: "string" }
+    - { label: "Twitter-Url", name: "twitter", widget: "string" }
