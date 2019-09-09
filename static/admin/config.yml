@@ -6,6 +6,23 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "main-menu"
+    label: "Main Menu"
+    folder: "content/mainMenu"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Post Author", name: "author", widget: "relation", collection: "category"}
+
+collections:
+  - name: "category"
+    label: "Category"
+    folder: "content/category"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Category", name: "category", widget: "string" }
+collections:
   - name: "blog"
     label: "Blog"
     folder: "content/"
@@ -18,3 +35,19 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - {label: "Post Author", name: "author", widget: "relation", collection: "authors", searchFields: ["name.name"],valueField: "name.name", displayFields: ["name"]}
+
+collections:
+  - name: "authors"
+    lable: "Authors"
+    folder: "content/authors"
+    create: true
+    slug: "{{slug}}"
+  fields:
+    - { lable: "Name", name: "name", widget: "string" }
+    - { lable: "Bio", name: "bio", widget: "string" }
+    - { label: "Avatar", name: "avatar", widget: "image" }
+    - { label: "Email", name: "email", widget: "string" }
+    - { label: "Facebook-Url", name: "facebook", widget: "string" }
+    - { label: "Twitter-Url", name: "twitter", widget: "string" }
