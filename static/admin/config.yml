@@ -38,5 +38,5 @@ collections:
       - { label: "Profile Picture", name: "avatar", widget: "image" }
       - { label: "Email", name: "email", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Facebook", name: "Profile Link", widget: "string" }
-      - { label: "Twitter", name: "Profile Link", widget: "string" }
+      - { label: "Facebook Profile Link", name: "facebook", widget: "string" }
+      - { label: "Twitter Profile Link", name: "twitter", widget: "string" }
