@@ -10,7 +10,7 @@ collections:
     label: "Blog"
     folder: "content/"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: true
     fields:
@@ -28,18 +28,15 @@ collections:
           displayFields: ["name"],
         }
       - { label: "Body", name: "body", widget: "markdown" }
-
-
-collections:
-  - name: "authors"
-    lable: "Authors"
-    folder: "content/authors"
+  - name: "author"
+    label: "Author"
+    folder: "content/author"
     create: true
-    slug: "{{slug}}"
-  fields:
-    - { lable: "Name", name: "name", widget: "string" }
-    - { lable: "Bio", name: "bio", widget: "string" }
-    - { label: "Avatar", name: "avatar", widget: "image" }
-    - { label: "Email", name: "email", widget: "string" }
-    - { label: "Facebook-Url", name: "facebook", widget: "string" }
-    - { label: "Twitter-Url", name: "twitter", widget: "string" }
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template i.e. YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Profile Picture", name: "avatar", widget: "image" }
+      - { label: "Email", name: "email", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Facebook", name: "Profile Link", widget: "string" }
+      - { label: "Twitter", name: "Profile Link", widget: "string" }
